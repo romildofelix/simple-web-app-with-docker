@@ -1,5 +1,9 @@
 name: Build 
+#In order for it to behave as intended, I have to use the following condition
+#if: ${{ github.event.inputs.should_run_tests == "true" }}
 
+#And not as you would expect from a boolean:
+#if: ${{ github.event.inputs.should_run_tests }}
 
 on:
   workflow_dispatch:
@@ -7,9 +11,14 @@ on:
       environment:
         type: environment
         description: Select the environment
-      boolean:
+      skip-tests:
         type: boolean
-        description: True or False
+        description: Skip tests
+        required: true
+        default: 'true'
+      #boolean:
+       # type: boolean
+        #description: True or False
       choice:
         type: choice
         description: Make a choice
