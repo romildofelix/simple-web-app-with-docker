@@ -26,7 +26,7 @@ on:
         required: true
       skip-tests2:
         type: boolean
-        description: carguero-tripkpi
+        description: plataforma-integration-api
         required: true
       skip-tests3:
         type: boolean
@@ -38,11 +38,11 @@ on:
         required: true
       skip-tests5:
         type: boolean
-        description: carguero-bff
+        description: plataforma-api-loadorder
         required: true
       skip-tests6:
         type: boolean
-        description: backoffice-api
+        description: plataforma-job-webhook-v1-request
         required: true
         
 #on:
