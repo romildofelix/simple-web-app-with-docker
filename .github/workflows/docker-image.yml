@@ -8,7 +8,7 @@ on:
         description: 'Lista de APIs'
         required: true
         options: ['production', 'staging', 'development']
-        default: 'development'
+        #default: 'development'
         
 jobs:
 
