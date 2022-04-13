@@ -6,3 +6,4 @@ on:
         required: true
         options: ['production', 'staging', 'development']
         default: 'development'
+        #
