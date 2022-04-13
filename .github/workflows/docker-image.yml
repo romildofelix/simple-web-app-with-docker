@@ -4,30 +4,70 @@ name: Build
 
 #And not as you would expect from a boolean:
 #if: ${{ github.event.inputs.should_run_tests }}
-
 on:
   workflow_dispatch:
-    inputs:
+    inputs:      
+      choice:
+        type: choice
+        description: Escolha o Ambiente
+        options:
+          - homolog
+          - homolog2
+          - staging
+      account:
+        description: 'Insira a Branch'
+        required: true
       environment:
         type: environment
-        description: Select the environment
+        description: SELECT API TO DEPLOY
       skip-tests:
         type: boolean
-        description: Skip tests
+        description: plataforma-api
+        required: true
       skip-tests2:
         type: boolean
-        description: Skip tests
+        description: carguero-tripkpi
+        required: true
+      skip-tests3:
+        type: boolean
+        description: plataforma-api-amaggi
+        required: true
+      skip-tests4:
+        type: boolean
+        description: plataforma-frontend
+        required: true
+      skip-tests5:
+        type: boolean
+        description: carguero-bff
+        required: true
+      skip-tests6:
+        type: boolean
+        description: backoffice-api
+        required: true
+        
+#on:
+# workflow_dispatch:
+#    inputs:
+#      environment:
+#        type: environment
+#        description: Select the environment
+#      skip-tests:
+#        type: boolean
+#        description: Skip tests
+#      skip-tests2:
+#        type: boolean
+#        description: Skip tests#
 
       #boolean:
        # type: boolean
         #description: True or False
-      choice:
-        type: choice
-        description: Make a choice
-        options:
-        - foo
-        - bar
-        - baz
+#      choice:
+#        type: choice
+#        description: Make a choice
+#        options:
+#        - foo
+#        - bar
+#        - baz
         
 jobs:
 
