@@ -14,8 +14,10 @@ on:
       skip-tests:
         type: boolean
         description: Skip tests
-        required: true
-        default: 'true'
+      skip-tests2:
+        type: boolean
+        description: Skip tests
+
       #boolean:
        # type: boolean
         #description: True or False
