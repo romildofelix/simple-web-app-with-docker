@@ -4,11 +4,19 @@ name: Build
 on:
   workflow_dispatch:
     inputs:
-      project:
-        description: 'Lista de APIs'
-        required: true
-        options: ['production', 'staging', 'development']
-        #default: 'development'
+      environment:
+        type: environment
+        description: Select the environment
+      boolean:
+        type: boolean
+        description: True or False
+      choice:
+        type: choice
+        description: Make a choice
+        options:
+        - foo
+        - bar
+        - baz
         
 jobs:
 
